@@ -1,14 +1,7 @@
 <input type="text" id="new-todo" placeholder="What needs to be done?" />
 
 <section id="main">
-    <ul id="todo-list">
-        {{#each model as |todo|}}
-            <li class="completed">
-                <input type="checkbox" class="toggle">
-                <label>{{todo.title}}</label><button class="destroy"></button>
-            </li>
-        {{/each}}
-    </ul>
+    {{outlet}}
 
     <input type="checkbox" id="toggle-all">
 </section>
@@ -32,4 +25,4 @@
     <button id="clear-completed">
         Clear completed (1)
     </button>
-</footer>  
+</footer>
