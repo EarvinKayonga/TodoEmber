@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    let todos = [
+    /*let todos = [
       {
         title: "Learn Ember",
         complete: false,
@@ -23,7 +23,7 @@ export default Ember.Route.extend({
         title: "Be good at Maths",
         complete: true,
       }
-    ];
-    return todos;
+    ];*/
+    return this.store.findAll('todo');
   }
 });
